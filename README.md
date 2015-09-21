@@ -15,11 +15,17 @@
 
 - Memeber-level access:
 
+``
 Classes 	Class 	Package 	Subclass 	World
+
 public 		Y 		Y 			Y 			Y
+
 protected 	Y 		Y 			Y 			N
+
 no modifier Y 		Y 			N 			N
+
 private 	Y 		N 			N 			N
+``
 
 - Subclassing can allow greater access, but never less.
 
@@ -42,16 +48,25 @@ private 	Y 		N 			N 			N
 - If your method overrides one of its superclass's methods, you can invoke the overridden method through the use of the keyword super. (Also accesses hidden methods (static methods))
 
 ``java
+
 public class Subclass extends Superclass {
+
     // overrides printMethod in Superclass
+
     public void printMethod() {
+
         super.printMethod();
         System.out.println("Printed in Subclass");
+
     }
+
     public static void main(String[] args) {
+
         Subclass s = new Subclass();
         s.printMethod();    
+
     }
+
 }
 ``
 
